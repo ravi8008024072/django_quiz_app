@@ -1,0 +1,69 @@
+</!DOCTYPE html>
+<html>
+<head>
+  <title>CIOC Register</title>
+  	<style>
+      .footer {
+         position: fixed;
+         left: 0;
+         bottom: 0;
+         width: 100%;
+         background-color: #798586;
+         color: white;
+         text-align: center;
+      }
+  </style>
+</head>
+  <link href="https://fonts.googleapis.com/css?family=Crete+Round:400i" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<body style="background-color: #E8E8E8" onload ="f1()">
+	<div class=" container text-center">
+		<h1 style="font-family: 'Crete Round', serif;"><u>CIOC Registration</u></h1>
+		<h3 style="font-family: 'Crete Round', serif;">Student Form</h3>
+		<hr>
+    <form method="POST" style="padding-top: 20px;" id="form1" runat="server">
+    		{%csrf_token%}
+      <div class="row">
+        <div class="col">
+          <LABEL style="font-family: 'Crete Round', serif; font-size: 30px">Email</LABEL>
+        </div>
+        <div class="col" style="padding-right: 160px">
+          <input type="text" class="form-control" name="email" placeholder="Email"><br>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <LABEL style="font-family: 'Crete Round', serif; font-size: 30px">User name</LABEL>
+        </div>
+        <div class="col" style="padding-right: 160px">
+          <input type="text" class="form-control" name="uname" placeholder="User name"><br>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <LABEL style="font-family: 'Crete Round', serif; font-size: 30px">Password</LABEL>
+        </div>
+        <div class="col" style="padding-right: 160px">
+          <input type="password" class="form-control" name="password" placeholder="Password"><br>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+    	     <input type="submit" class="btn btn-outline-success" name="submit"  value="Submit">
+        </div>
+    	</div>
+    </form>
+
+    <div class="footer">
+      <footer style="font-family: 'Timmana', sans-serif; padding-left: 10px; margin-top: 20px;">
+        <address style="font-family: 'Timmana', sans-serif; padding-left: 30px;"><u>Address:</u><br> 4th Floor, Venkateshwara Heritage, Kudlu Hosa Road, Opp Sai Purna Premium Apartment, Sai Meadows, Kudlu, Bengaluru, Karnataka 560068
+        <br>Phone: 078408 50111
+        </address>
+      </footer>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CIOC Test</title>
+</head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<body>
+    <div class="container jumbotro" style="background-color: #00DDFF; padding-top: 25px">
+      <header class="text-center">
+          <h1><b>CIOC Objective Test Questions: </b></h1><hr class="my-4">
+          <h3>Student Name: {{userData.username}}</h3>
+          <h3>Student ID: CS-{{userData.pk}}</h3>
+      </header>
+    </div>
+    <div class="container jumbotron form-group" style="padding-top: 5px" >
+      <form method="post" name="results">
+          {% for q in questions %}
+              {% csrf_token %}
+          <h3>{{ q.id }}. {{ q.question }}</h3>
+          <input type="radio" name="q{{ q.id }}" value="a" id = "q1a"> a. {{ q.option1 }}<br>
+          <input type="radio" name="q{{ q.id }}" value="b" id = "q1b"> b. {{ q.option2 }}<br>
+          <input type="radio" name="q{{ q.id }}" value="c" id = "q1c"> c. {{ q.option3 }}<br>
+          <input type="radio" name="q{{ q.id }}" value="d" id = "q1d"> d. {{ q.option4 }}<br>
+          <hr class="my-4">
+          {% endfor %}
+          <input type="submit" class="btn btn-primary" value="Submit Answer">
+      </form>
+    </div>
+
+</body>
+</html>
