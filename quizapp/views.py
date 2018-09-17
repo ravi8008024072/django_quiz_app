@@ -46,6 +46,9 @@ def index(request):
 def questions(request):
     return render(request, 'quiz.html')
 
+def studselect(request):
+    return render(request, 'studselect.html')
+
 def register(request):
     if request.method=='POST':
         # fname=request.POST.get('fname')
@@ -59,6 +62,7 @@ def register(request):
         userObj=User(**data)
         userObj.save()
         return redirect('/')
+        # return render(request, 'studselect.html')
     else:
         return render(request, 'register.html')
     #     form=UserCreationForm()

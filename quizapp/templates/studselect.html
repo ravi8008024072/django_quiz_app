@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+{% block main_content %}
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>{% block title %}Welcome{% endblock %}</title>
+</head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<h2 style = "text-align: center; margin-right: 100px; font-family: 'Crete Round', serif;"><u>Welcome To </u><h1 style = "text-align: center;margin-right: 130px;color: #fff; font-family: 'Crete Round', serif;"><a href = "https://www.google.com/search?q=cioc&ie=utf-8&oe=utf-8&client=firefox-b-ab#lrd=0x3bae1355d65f4703:0x85053037befdb9b6,1,,,">CIOC Pvt Ltd.</a></h1></h2>
+<body style="background-color: #E8E8E8">
+  <!-- <div class="container">
+        <a style="font-size:25px" href="{% url 'logout'%}">Log Out</a> -->
+
+    <!-- <script>
+    function startTimer(duration, display) {
+        var start = Date.now(),
+            diff,
+            minutes,
+            seconds;
+        function timer() {
+            // get the number of seconds that have elapsed since
+            // startTimer() was called
+            diff = duration - (((Date.now() - start) / 1000) | 0);
+
+            // does the same job as parseInt truncates the float
+            minutes = (diff / 60) | 0;
+            seconds = (diff % 60) | 0;
+
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+
+            display.textContent = minutes + ":" + seconds;
+
+            if (diff <= 0) {
+                // add one second so that the count down starts at the full duration
+                // example 05:00 not 04:59
+                start = Date.now() + 1000;
+
+            }
+        };
+        // we don't want to wait a full second before the timer starts
+        timer();
+        setInterval(timer, 1000);
+    }
+
+    window.onload = function () {
+        var fiveMinutes = 60 * 1,
+            display = document.querySelector('#time');
+        startTimer(fiveMinutes, display);
+    };
+    </script> -->
+    <!-- <script>
+      function openWin() {
+          var myWindow = window.open("{% url 'quiz'%}");
+          // myWindow.document.write("{% url 'quiz'%}");
+
+          setTimeout(function(){ myWindow.close() }, 20000);
+      }
+
+    </script>
+
+    <h1 style="font-size:25px;">Start Quiz before time ends in <span id="time"></span> minutes!</h1>
+    <header>
+        {% if user.is_authenticated %}
+         <div align="center" style="font-size:50px;"> Hi {{ user.username }} !!</div><br>
+          <pre class="tab">
+        {% endif %}
+          </pre>
+    <br> <h1 style="font-size:50px" >Select option? Quiz or Check answers</h1>
+    <div ><button type="button" name="button" onclick="openWin()"> <a style="font-size:25px" href="{% url 'quiz'%}">Start Quiz</a></button></div><br><br>
+    <div > <a style="font-size:25px" href="{% url 'check'%}">Check Answers</a></div><br>
+    <div > <a style="font-size:25px" href="{% url 'leader'%}">leader board of Quiz</a></div><br>
+    </header>
+      <main>
+        {% block content %}
+        {% endblock %}
+    	<div class="basic">
+    </div>
+      </main> -->
+  </div>
+</body>
+{% endblock %}
+</html>
